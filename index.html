@@ -23,19 +23,19 @@
 </head>
 
 <body style="background-color:rgb(248,217,217);font-family:times-new-roman;">
-    <div class="container" style="background-color:#88c67e;">
+    <div class="container" style="background-color:#88c67e;" id="app">
         <h2 class="text-center" style="font-family:Lora, serif;"><i class="fa fa-handshake-o" style="color:rgb(219,0,255);"></i>&nbsp; &nbsp;First Vue Application !</h2>
-        <div class="media" style="background-color:#7ecda7;"><img class="mr-3">
+        <div class="media" v-for = "submission in submissions" v-bind:key="submission.id" style="background-color:#7ecda7;"><img class="mr-3" v-bind:src="submissions[0].image" width="5%" height="5%">
             <div class="media-body">
-                <h5>Name ...&nbsp;<span>#id Here</span><span><i class="fa fa-chevron-up"></i><strong>number</strong></span></h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus nisl ac diam feugiat, non vestibulum libero posuere. Vivamus pharetra leo non nulla egestas, nec malesuada orci finibus. </p>
+                <h5>{{submission.title}}<span>#id Here</span><span id="lefti" style="text-decoration:none;color:black;"><a href="#" class="fa fa-chevron-up"><strong>Votes: {{submission.votes}}</strong></a></span></h5>
+                <p>{{submission.description}}</p>
                 <p>Submitted By: Name.</p>
             </div>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/vue"></script>
     <script src="seed.js"></script>
     <script src="main.js"></script>
 </body>
