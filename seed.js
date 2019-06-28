@@ -17,14 +17,14 @@ window.Seed = (function () {
         id:1,
         title:'This is the first Title',
         description:'This is the description of the first submission.',
-        votes:16,
+        votes:19,
         image:'assets/img/beach.jpg' 
       },
       {
         id:2,
         title:'This is the second Title.',
         description:'This is the second description',
-        votes:17,
+        votes:21,
         image:'assets/img/beach.jpg' 
       },
       {
