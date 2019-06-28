@@ -27,7 +27,7 @@
         <h2 class="text-center" style="font-family:Lora, serif;"><i class="fa fa-handshake-o" style="color:rgb(219,0,255);"></i>&nbsp; &nbsp;First Vue Application !</h2>
         <div class="media" v-for = "submission in sortedSubmission" v-bind:key="submission.id" style="background-color:#7ecda7;margin: 2%;"><img class="mr-3" v-bind:src="submissions[0].image" width="5%" height="5%">
             <div class="media-body">
-                <h5>{{submission.title}}<span>#id Here</span><span id="lefti" style="text-decoration:none;color:black;"><a href="#" class="fa fa-chevron-up"><strong>Votes: {{submission.votes}}</strong></a></span></h5>
+                <h5>{{submission.title}}<span>#id Here</span><span id="lefti" style="text-decoration:none;color:black;"><a href="#" v-on:click = "upvote(submission.id)" class="fa fa-chevron-up"><strong>Votes: {{submission.votes}}</strong></a></span></h5>
                 <p>{{submission.description}}</p>
                 <p>Submitted By: Name.</p>
             </div>
